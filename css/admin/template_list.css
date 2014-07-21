@@ -1,0 +1,108 @@
+
+/* 为模板列表提供专用样式 */
+/* yongbin@staff.sina.com.cn, 2009-09-25 */
+
+.list_table {
+	background-color: #FFFFFF;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 2px;
+	padding: 10px;
+	border: 1px solid #B4C1D6;
+	border-top: none;
+	border-bottom: none;
+}
+
+.list_table thead th, .list_table tfoot th {
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/bg-thead.png) repeat-x;
+	height: 34px;
+	line-height: 34px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	white-space: nowrap;
+	padding: 0 7px;
+}
+.list_table tr.odd {
+	background-color: #E6ECF6;
+}
+.list_table tr.del {
+	color:#fff;
+	background-color: #999;
+}
+
+.list_table tbody tr td {
+	padding: 4px 7px;
+	border-right: 1px dashed #E6ECF6;
+}
+.list_table tr.odd td {
+        padding: 4px 7px;
+        border-right: 1px dashed #FFF;
+}
+
+/* td样式 */
+.tmpl_drag {
+	width: 26px;
+}
+.tmpl_drag_handler {
+	cursor: -moz-grab;
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/grippy.png) center no-repeat;
+}
+.tmpl_checkbox {
+	width: 20px;
+}
+.tmpl_index {
+	width: 32px;
+}
+.tmpl_title {
+	width: 200px;
+}
+.tmpl_item {
+/*	width: 50%;*/
+}
+.tmpl_edit {
+	width: 42px;
+}
+.tmpl_flist {
+	width: 52px;
+}
+.tmpl_design {
+	width: 42px;
+}
+
+.recycle {
+	padding-left: 6px;
+	/*background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/recycle.jpg) left no-repeat;*/
+}
+
+table thead th.sorted .sortoptions {
+    display: block;
+    float: right;
+    padding: 4px 5px 0;
+    text-align: right;
+}
+table thead th.sorted .sortoptions a.sortremove {
+    background: url("/images/sorting-icons.gif") no-repeat scroll -4px -5px transparent;
+}
+table thead th.sorted .sortoptions a.sortremove:hover {
+    background: url("/images/sorting-icons.gif") no-repeat scroll -4px -27px transparent;
+}
+table thead th.sorted .sortoptions a.ascending {
+    background: url("/images/sorting-icons.gif") no-repeat scroll -5px -50px transparent;
+}
+table thead th.sorted .sortoptions a.ascending:hover {
+    background: url("/images/sorting-icons.gif") no-repeat scroll -5px -72px transparent;
+}
+table thead th.sorted .sortoptions a.descending {
+    background: url("/images/sorting-icons.gif") no-repeat scroll -5px -94px transparent;
+}
+table thead th.sorted .sortoptions a.descending:hover {
+    background: url("/images/sorting-icons.gif") no-repeat scroll -5px -115px transparent;
+}
+table thead th.sorted .sortoptions a {
+    display: inline-block;
+    height: 12px;
+    width: 14px;
+}
+table.orderable tbody tr td:hover {
+    cursor: move;
+}

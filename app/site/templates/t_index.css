@@ -1,0 +1,258 @@
+body {
+    color: #333333;
+    font: 100% Trebuchet MS, Arial, Helvetica, Sans-Serif;
+    text-align: center;
+}
+
+a:link {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green
+}
+
+#header {
+    margin-bottom: 30px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+#top {
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+
+#top_logo {
+    left: 0;
+    position: absolute;
+    top: 0px;
+}
+
+#language {
+    float: right;
+}
+
+#top_menu1 {
+    left: 947px;
+    position: absolute;
+    top: 100px;
+}
+
+#top_menu1 a {
+    margin-left: 20px;
+}
+
+#hr1 {
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px 0 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 210px;
+    width: 1200px;
+}
+
+#catalog {
+    left: 0;
+    position: absolute;
+    top: 230px;
+    width: 1200px;
+}
+
+#catalog a {
+    margin-left: 20px;
+}
+
+#container1 {
+    height: 780px;
+    margin: 0 auto 2em;
+    position: relative;
+    text-align: left;
+    width: 1200px;
+}
+
+#container1 div {
+    float: left;
+}
+
+#container1_left {
+    display: block;
+    width: 290px;
+    margin-right: 6px;
+}
+
+#container1_center {
+    display: block;
+    margin-right: 6px;
+}
+
+#container1_right{
+    display:block;
+    width:298px;
+}
+
+#container2 {
+    text-align: center;
+}
+
+#container2 a {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+#main_best_roll {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#lista1 {
+    margin: 60px auto 80px;
+}
+
+/* footer begin*/
+
+#footer {
+    margin: 0 auto;
+    width: 1200px;
+}
+#go_top {
+    padding-bottom: 23px;
+    padding-top: 100px;
+    text-align: right;
+}
+
+#bottom_line {
+    padding-bottom: 40px;
+}
+
+.hr_b {
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px 0 0;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#re-footer {
+    margin-top: -5px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#re-footer .support {
+    width: 340px;
+}
+
+#re-footer .support, #re-footer .payment, #re-footer .more, #re-footer .follow {
+    float: left;
+}
+
+#re-footer h4, #re-footer p, #re-footer ul {
+    margin: 0;
+    padding: 0;
+}
+#re-footer h4 {
+    height: 36px;
+}
+
+#re-footer p {
+    color: #000000;
+    font:italic 12px/20px arial,sans-serif;
+}
+
+#re-footer p span {
+    color: red;
+    font: italic bold 20px/30px arial,sans-serif;
+}
+
+#re-footer a {
+    color: #000000;
+    font-size: 100%;
+    font-weight: 900;
+}
+
+#re-footer .payment{
+    width: 353px;
+}
+
+#re-footer .shipping {
+    margin-top: 30px;
+}
+
+#re-footer .shipping h4 {
+    height: 25px;
+}
+
+#re-footer .shipping p {
+    color: #ff3232;
+    font-family: verdana;
+    font-size: 10px;
+    line-height: 15px;
+    padding-bottom: 16px;
+}
+
+#re-footer .shipping a {
+    font-family: verdana;
+    font-size: 10px;
+}
+
+#re-footer .more {
+    width: 239px;
+}
+
+#re-footer .more h4 {
+    height: 32px;
+}
+
+#re-footer .more li {
+    height: 21px;
+    overflow: hidden;
+}
+
+#re-footer .more li a {
+    color: #000000;
+    font-family: verdana;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+#re-footer .follow{
+    width: 200px;
+}
+
+#re-footer .notification {
+    clear: both;
+}
+
+#re-footer .notification h4 {
+    height: 34px;
+}
+
+#re-footer .notification .nav a{
+    font-family: arial;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+#re-footer .outlink {
+    float: right;
+    height: 40px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#re-footer .outlink li {
+    float: left;
+}
+
+#mypage {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/*footer end*/

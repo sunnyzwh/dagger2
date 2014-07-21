@@ -1,0 +1,38 @@
+<!-- 树状菜单 -->
+<!--
+<h1 class="item1">XX管理</h1>
+<div class="block">
+    <ul>
+        <li><a href="{=$smarty.const.URL_ROOT=}index.php?c=xx&a=xx">xx管理</a></li>
+    </ul>
+</div>
+-->
+<div id="menutree" class="ui-menutree">
+<!--
+    <h1 class="menu-itemHeader menu-extension">测试管理</h1>
+    <div class="menu-itemCont">
+        <ul>
+            <li><a href="{=createUrl controller='test' action='view'=}">测试列表</a></li>
+        </ul>
+    </div>
+-->
+    <h1 class="menu-itemHeader menu-extension">管理用户管理</h1>
+<div class="menu-itemCont">
+    <ul>
+        <li><a href="{=createUrl controller='manage_user' action='view'=}">管理用户列表</a></li>
+    </ul>
+</div>
+<h1 class="menu-itemHeader menu-extension">商品管理</h1>
+<div class="menu-itemCont">
+    <ul>
+        <li><a href="{=createUrl controller='item' action='view'=}">商品列表</a></li>
+    </ul>
+</div>
+<h1 class="menu-itemHeader menu-extension">评论管理</h1>
+<div class="menu-itemCont">
+    <ul>
+        <li><a href="{=createUrl controller='comment' action='view'=}">评论列表</a></li>
+    </ul>
+</div>
+{=*后台菜单*=}
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>后台管理系统</title>
+<link rel="stylesheet" type="text/css" href="{=$basePath=}/css/admin/style.css" />
+<link rel="stylesheet" type="text/css" href="http://news.sina.com.cn/js/jquery_ui/css/jquery-ui-1.10.1.custom.min.css" />
+<link rel="stylesheet" type="text/css" href="{=$basePath=}/css/admin/batch.css">
+
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://news.sina.com.cn/js/jquery_ui/js/jquery-ui-1.10.1.custom.js"></script>
+<script type="text/javascript" src="{=$basePath=}/js/jqueryPlugins.js"></script>
+<script type="text/javascript" src="{=$basePath=}/js/admin/gsps.js"></script>
+
+</head>
+
+<body>
+    <div class="ui-wrapper">
+        <!--header begin-->
+        <div class="header">
+            <div class="header-logo"></div>
+            <div class="header-content">
+                <div class="header-userEntry">
+                    <a href="#" target="_blank">切换用户</a> | 
+                    <a href="#" target="_blank">设置</a> |
+                    <a href="?c=admin&a=logout">注销</a>
+                </div>
+            </div>
+        </div>
+        <!--header end-->
+        <!--content begin-->
+        <div class="cms-content clearfix">
+            <div class="contetnt-left">
+            {=include file="left.html"=}
+            </div>
+            <div id="content" class="content-right">
+            {=block name=main=}{=/block=}
+            </div>
+        </div>
+        <!--content end-->
+        <!-- footer -->
+        <div class="footer">
+            <p>Copyright &copy; 1996-{=date('Y')=} SINA Corporation, All Rights Reserved</p>
+            <p></p>
+            <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a></p>
+        </div>
+        <!-- end footer -->
+    </div>
+    <script type="text/javascript" src="/js/admin/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+{=extends file='layout.html'=}
+{=block name=main=}
+<!-- separator start-->
+<div id="separator" class="ui-separator separator-left" data-options-toggle=".contetnt-left" data-options-extend = ".content-right">
+</div>
+<!-- separator end-->
+<!-- content start-->
+<div class="cms-main">
+    <!-- menubar start-->
+    <div class="man-nav">
+        <div class="ui-menubar clearfix">
+        <ul class="ui-menu-list">
+                <li class="ui-menu-item ui-menu-current opt" data-opt_type="search" data-opt_id="searchContainer" data-opt_url="/">管理用户
+                </li>
+            </ul>
+            <div class="ui-menu-state">
+                <a href="/">后台首页</a>/<span class="menu-state-current">管理用户</span>
+            </div>
+        </div>
+    </div>
+    <!--menubar end-->
+    <div class="main-content">
+        <div class="content-search">
+            <fieldset class="ui-search">
+            <form id="search_form" name="search_form" method="get">
+                    <input type="hidden" name="s" value="manage_user"/>
+            <input type="hidden" name="a" value="view"/>
+            <div class="ui-search-container">
+                <select name="_search_field"><option value="id">ID</option><option value="email">EMAIL</option><option value="is_del">IS_DEL</option></select>&nbsp;&nbsp;<input hidefocus type="text" name="_search_keyword" value="" id="keyword" size="20" class="ui-input-text">&nbsp;&nbsp;<input hidefocus type="button" class="ui-input-button opt" data-opt_type="search" data-opt_id="searchContainer" data-opt_url="/" value="搜索">
+            </div>
+        </form>
+        </fieldset>
+    </div>
+        <div id="searchContainer">
+            <div>
+                <div class="ui-toolbar">
+                    <div class="toolbar-buttons">
+                        <input type="submit" class="opt ui-input-button" data-opt_id="manage_user_update_dialog" data-opt_type="add" data-opt_action="{=createUrl controller='manage_user' action='create'=}" alt="添加管理用户" title="添加管理用户"value="添加管理用户"> 
+                        <input type="button" class="opt ui-input-button" data-opt_id='sortable_tbody' data-opt_type="refresh" data-opt_url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}' value="刷新">
+                    </div>
+                    <div class="toolbar-pagination">
+                        <table><tr><td>{=$pageStr nofilter=}&nbsp;</td></tr></table>
+                    </div>
+                </div>
+                <div class="ui-debug-ie6-table">
+                    <table class="ui-list-table">
+                        <thead>
+                            <tr>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='email' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>EMAIL</th>
+                        <th>PASSWORD</th>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='is_del' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>IS_DEL</th>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='ctime' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>CTIME</th>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='utime' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>UTIME</th>
+                        <th>操作</th></tr>
+
+                        </thead>
+                        <tbody id="sortable_tbody" style='table-layout: fixed;'>
+                            <tr></tr>
+                            {=foreach from=$data item=item=}
+                                <tr class="{=cycle values=',odd'=}{=if $item.is_del == 1=} del{=/if=}" id="tr_{=$item.id=}">
+                        <td class="td_email">{=$item.email=}</td>
+                        <td class="td_password">{=$item.password=}</td>
+                        <td class="td_is_del">{=$item.is_del=}</td>
+                        <td class="td_ctime">{=$item.ctime|date_format:'%Y-%m-%d'=}</td>
+                        <td class="td_utime">{=$item.utime|date_format:'%Y-%m-%d'=}</td>
+{=if $item.is_del == 1=}                        <td>[<a href="javascript:void(0);" class="opt"  data-opt_id="manage_user_update_dialog" data-opt_type="update" data-opt_url="{=createUrl controller='manage_user' action='get' params=[id=>{=$item.id=}]=}" data-opt_action="{=createUrl controller='manage_user' action='update' params=[id=>{=$item.id=}]=}" alt="管理用户编辑" title="管理用户编辑" >编辑</a>] | [<a href="javascript:void(0);" class="opt"  data-opt_id="manage_user_logic_resume" data-opt_type="delete" data-opt_url="{=createUrl controller='manage_user' action='logic_resume' params=[id=>{=$item.id=}]=}" alt="管理用户恢复" title="管理用户恢复" >恢复</a>]</td>{=else=}                        <td>[<a href="javascript:void(0);" class="opt"  data-opt_id="manage_user_update_dialog" data-opt_type="update" data-opt_url="{=createUrl controller='manage_user' action='get' params=[id=>{=$item.id=}]=}" data-opt_action="{=createUrl controller='manage_user' action='update' params=[id=>{=$item.id=}]=}" alt="管理用户编辑" title="管理用户编辑" >编辑</a>] | [<a href="javascript:void(0);" class="opt"  data-opt_id="manage_user_logic_delete" data-opt_type="delete" data-opt_url="{=createUrl controller='manage_user' action='logic_delete' params=[id=>{=$item.id=}]=}" alt="管理用户删除" title="管理用户删除" >删除</a>]</td>{=/if=}</tr>
+
+                            {=/foreach=} 
+                        </tbody>
+                        <thead>
+                            <tr>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='email' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>EMAIL</th>
+                        <th>PASSWORD</th>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='is_del' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>IS_DEL</th>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='ctime' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>CTIME</th>
+                       <th class='opt sortable' type='button' data-opt_type='order' data-opt_name='utime' data-opt_id='sortable_tbody' data-url='http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}'><div class='sortoptions'></div>UTIME</th>
+                        <th>操作</th></tr>
+
+                        </thead>
+                    </table>
+                </div>
+                <div class="ui-toolbar">
+                    <div class="toolbar-pagination">
+                        <table><tr><td>{=$pageStr nofilter=}&nbsp;</td></tr></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--form start-->
+<div id="manage_user_update_dialog" style="display:none;" title="管理用户编辑">
+<form class="ui-form" action="" method="post"><table align="center" width="100%"><tbody>
+<tr class="field-group"><td class="field-header">EMAIL：</td><td class="field-content"><input type="text" class="ui-text-dialog" name="email" value="" /></td></tr>
+<tr class="field-group"><td class="field-header">PASSWORD：</td><td class="field-content"><input type="text" class="ui-text-dialog" name="password" value="" /></td></tr>
+<tr class="field-group"><td class="field-header">IS_DEL：</td><td class="field-content"><input type="text" class="ui-text-dialog" name="is_del" value="" /></td></tr>
+<tr class="field-group"><td class="field-header">CTIME：</td><td class="field-content"><input type="input" class="ui-text-dialog" name="ctime" id="input_calendar_ctime"><img style="vertical-align: middle;margin-left: 2px;" src="images/calendar.gif" alt="..." title="..." id="show_calendar_ctime" />
+<script>
+$(document).ready(function(){
+   $('#input_calendar_ctime').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+</td></tr>
+<tr class="field-group"><td class="field-header">UTIME：</td><td class="field-content"><input type="input" class="ui-text-dialog" name="utime" id="input_calendar_utime"><img style="vertical-align: middle;margin-left: 2px;" src="images/calendar.gif" alt="..." title="..." id="show_calendar_utime" />
+<script>
+$(document).ready(function(){
+   $('#input_calendar_utime').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+</td></tr>
+<tr class="field-group" style="border-bottom:0px;padding-bottom:0px;"><td class="field-header"></td><td class="field-content" style="text-align: center; display: block;"><input type="submit" class="ui-button-submit" id="submit" value="提交"><td></tr></tbody></table></form>
+</div>
+<!--form end-->
+
+<script type="text/javascript">
+    function beginOpt(obj) {
+    switch (obj.data("opt_id")) {
+        case "manage_user_delete":
+            if(!confirm("确定要删除么？")) {
+                return false;
+        }
+        break;
+    }
+    return true;
+    }
+
+    function endOpt(obj, data) {
+    switch (obj.data("opt_id")) {
+            //更新
+        case "manage_user_update_dialog":
+                if (data.status.code == "0") {
+                var result = data.data;
+            for (var i in result) {
+                obj.parent("td").parent("tr").find(".td_" + i).html(result[i]);
+            }
+        }
+        break;
+        //删除
+        case "manage_user_delete":
+                if (data.status.code == "0") {
+                obj.parent("td").parent("tr").addClass("del");
+                    //reloadList('http://{=$smarty.server.HTTP_HOST=}{=$smarty.server.REQUEST_URI=}');
+        }
+        break;
+        //逻辑删除
+        case "manage_user_logic_delete":
+                if (data.status.code == "0") {
+                    obj.data("opt_id", obj.data("opt_id").replace("logic_delete", "logic_resume"));
+                    obj.data("opt_url", obj.data("opt_url").replace("logic_delete", "logic_resume"));
+                    obj.attr("alt", obj.attr("alt").replace("删除", "恢复"));
+                    obj.attr("title", obj.attr("title").replace("删除", "恢复"));
+            obj.parent("td").parent("tr").addClass("del");
+            obj.html("恢复");
+        }
+        break;
+        //逻辑恢复
+        case "manage_user_logic_resume":
+            if (data.status.code == '0') {
+                obj.data("opt_id", obj.data("opt_id").replace("logic_resume", "logic_delete"));
+            obj.data("opt_url", obj.data("opt_url").replace("logic_resume", "logic_delete"));
+            obj.attr("alt", obj.attr("alt").replace("恢复", "删除"));
+            obj.attr("title", obj.attr('title').replace("恢复", "删除"));
+            obj.parent("td").parent("tr").removeClass("del");
+            obj.html("删除");
+        }
+        break;
+        }
+    return true;
+    }
+
+    function endGetData(obj, data) {
+        switch (obj.data('opt_id')) {
+            case '***':
+                //do samething;
+                break;
+        }
+        return true;
+    }
+</script>
+{=/block=}

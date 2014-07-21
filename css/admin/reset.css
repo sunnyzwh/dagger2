@@ -1,0 +1,85 @@
+/* 重置所有样式，便于解决浏览器兼容性 */
+/* yongbin@staff.sina.com.cn, 2009-09-25 */
+
+/* reset begin */
+html{
+	background:#fff;
+	color:#000;
+}
+body,div,dl,dt,dd,ul,ol,li,
+h1,h2,h3,h4,h5,h6,pre,code,
+form,fieldset,legend,
+p,blockquote,th,td{
+    margin:0;
+    padding:0;
+    font-family: SimSun;
+}
+fieldset,img{
+    border:0;
+}
+select,input{
+	vertical-align:middle;
+}
+input,button,textarea,
+select,optgroup,option{
+    font-family:inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
+}
+code,kbd,samp,tt,small{
+    font-size:100%;
+}
+input,button,textarea,select{
+    *font-size:100%;
+}
+/* hack suda */
+img{display:none;}
+div img{display:inline;}
+
+html{}
+body{
+	font-size:12px;
+    line-height:1.67;
+	margin:0;
+	padding:0;
+}
+ol,ul{
+    list-style:none;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+caption,th{
+    text-align:left;
+}
+a{text-decoration:none;}
+a:hover,a:active,a:focus{text-decoration:underline;}
+/* reset end */
+
+acronym{
+	cursor: help;
+}
+.opt {;
+        cursor: pointer;
+}
+img.opt {
+        margin: 0 0 0 4px;
+        border: #FFF 1px solid;
+}
+img.opt:hover {
+        border: #CCC 1px solid;
+}
+
+.form_div {
+	padding: 3px 10px 5px 0;
+	border-bottom: #41A8E4 1px dashed;
+	overflow: hidden;
+}
+.text_gray {
+	color: #A5A5A5;
+}
+.text_red {
+	color: #F00;
+}

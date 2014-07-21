@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <script src="/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+        {=if !$smarty.get.nojs=}
+        <noscript>
+            <meta http-equiv="refresh" content="0; url=/?nojs=1" />
+        </noscript>
+        {=/if=}
+    </head>
+    <body>
+        {=pagelet id="test" params=['arg1'=>'arg1', 'arg2'=>'arg2']=}
+        <a href="{=createUrl project='admin1' controller='test' action='router'=}">test</a>
+    </body>
+</html>

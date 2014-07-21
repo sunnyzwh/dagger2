@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="topSP"></div>
+        <div id="logForm">
+        <div class="blk_login" style="display:block;" id="blk_login">
+            <h2><span style="font-size:36px;color:#C00;"></span><span style="font-size:36px;"></span></h2>
+            <h4></h4>
+            <div class="elements">
+            <input type="hidden" name="loginUrl" value="http://local.dagger.com/default/login">
+                <p>请使用新浪会员邮箱登陆，例如xxxx@sina.com</p>
+                <p>用户名：<input type="text" name=" " class="input_01" id="username" /></p>
+                <p>密&nbsp;&nbsp;码：<input type="password" name="" class="input_01"  id="password" /></p>
+                <p><input type="button" value="登&nbsp;&nbsp;&nbsp;录" class="smb_btn" /><label style="display:none;"><input name="" type="checkbox" value="30" id="rebName"  class="usercheck" />记录登录名</label></p>
+            </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                sinaSSOConfig = new function() {
+                    this.entry = 'vipbook'; // 本产品的标识
+                    this.setDomain = true; // 将document.domain 设置为sina.com.cn
+                    this.customLoginCallBack = function(loginStatus) { // 登录回调代码 
+                        console.log(loginStatus);
+                        alert(loginStatus.userinfo.name);
+                        alert(loginStatus.userinfo.uid);
+                        //window.location.href="/default/login";
+                    };
+                    this.customLogoutCallBack = function (result) { // 登出回调代码，如果不使用该js登出，则不需要实现该函数 
+                    };
+                };
+                sinaSSOController = new SSOController();
+                sinaSSOController.init();
+                $(".smb_btn").click(function(){
+                    sinaSSOController.login($("#username").val(), $("#password").val());
+                });
+            });
+        </script>
+        <script type="text/javascript" src="http://i.sso.sina.com.cn/js/ssologin.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Comment</title>
+</head>
+<body>
+<form action="{=createUrl controller='comment' action='add'=}" method="post">
+
+    star:<input type="text"  name="star"  /> <br/><br/>
+    content:<textarea name="content" cols="50" rows="10"> </textarea> <br/><br/>
+    order_id:<input type="text"  name="order_id"  /> <br/><br/>
+    item_id:<input type="text"  name="item_id"  /> <br/><br/>
+    parent_id:<input type="text"  name="parent_id"  /> <br/><br/>
+
+    <input type="submit"  value="添加评论" />
+</form>
+<br/>
+<span>##########################################################################</span>
+<br/>
+<form action="{=createUrl controller='comment' action='modify'=}" method="post">
+
+    comment id:<input type="text"  name="id"  /> <br/><br/>
+    star:<input type="text"  name="star"  /> <br/><br/>
+    content:<textarea name="content" cols="50" rows="10"> </textarea> <br/><br/>
+
+    <input type="submit"  value="修改评论" />
+</form>
+</body>
+</html>

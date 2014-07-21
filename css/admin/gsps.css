@@ -1,0 +1,382 @@
+﻿
+/* 发布系统v5界面通用样式 */
+/* yongbin@staff.sina.com.cn, 2009-09-25 */
+
+/* some special resets */
+a:link {
+	color: #2051A2;
+}
+a:visited {
+	color:#81511C;
+}
+a:hover,a:active,a:focus {
+	color:#0066FF;
+}
+body {
+	background-color: #F1F5F9;
+}
+input[type="text"]:focus, textarea:focus, select:focus {
+	background-color: #FFFFDD;
+}
+
+.button {
+	padding: 0 2px;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(http://news.sina.com.cn/deco/2010/0309/bg2.gif) repeat scroll 0 0;
+	border:1px solid #86A2C1;
+	cursor:pointer;
+	height:20px;
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+	background:transparent url(http://news.sina.com.cn/deco/2010/0309/bg3.gif) repeat scroll 0 0;
+}
+input[type="button"].opt, input[type="submit"].opt {
+}
+
+input[type="button"]:focus, input[type="submit"]:focus {
+	/*background-color: #D4D0C8;*/
+}
+
+input[type="text"], input[type="password"], textarea {
+	border-color: #666666 #CCCCCC #CCCCCC #666666;
+	border-style: solid;
+	border-width: 1px;
+	padding: 3px 3px 2px;
+	font-size: 12px;
+	height:13px;
+}
+
+
+input[type="checkbox"] {
+	margin-right: 3px;
+	margin-left:  4px;
+}
+label {
+	cursor: pointer;
+}
+
+/* unique areas, use id selector */
+#wrapper {
+	margin: 0 auto;
+    padding-left: 10px;
+	width: 978px;
+}
+
+#header {
+	margin-bottom: 5px;
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/bg-header.jpg) repeat-x 0 24px;
+}
+
+#header span {
+	margin: 5px 5px 0;
+	float: right;
+	color: #333333;
+}
+#header span a {
+	color: #333333;
+}
+
+#header div.cms {
+	background-color: #AFCCED;
+	line-height:24px;
+	padding:0 10px;
+	height: 24px;
+}
+#header div.cms span {
+	float: right;
+	margin: 0;
+}
+.header-logo {
+	width: 950px;
+	margin: 0 auto;
+}
+#main {
+	width: 100%;
+    _width: 815px;
+}
+
+#menutree {
+	float: left;
+	width: 148px;
+	margin-right: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #B9D1E2;
+	z-index: 99;
+}
+#menutree h1 {
+	font-family: 微软雅黑;
+	font-size: 15px;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 46px;
+	border-bottom: 1px solid #B9CDE2;
+	cursor: pointer;
+}
+
+#menutree h1.item1 {
+	background: url(http://www.sinaimg.cn/book/deco/2010/icon2.png) no-repeat;
+}
+#menutree h1.item2 {
+	background: url(http://www.sinaimg.cn/book/deco/2010/icon1.png) no-repeat;
+}
+#menutree h1.item3 {
+	background: url(http://www.sinaimg.cn/book/deco/2010/icon3.png) no-repeat;
+}
+#menutree h1.item4 {
+	background: url(http://www.sinaimg.cn/book/deco/2010/icon4.png) no-repeat;
+}
+#menutree h1.item5 {
+	background: url(http://www.sinaimg.cn/book/deco/2010/icon5.png) no-repeat;
+}
+
+#menubar {
+	padding: 6px 10px;
+	line-height: 24px;
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/bg-menubar.png) top left repeat-x;
+}
+
+#menulist {
+	float: right;
+	margin-top: -6px;
+}
+
+#menulist li {
+	float: left;
+	margin: 4px 5px 0;
+	text-align: center;
+	height: 27px;
+	width: 77px;
+	line-height: 27px;
+	padding-top: 5px;
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/bg-menuitem.png) top left no-repeat;
+	cursor: pointer;
+	color: #FFF;
+}
+
+#menulist li.selected {
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/bg-menuitem-selected.png) top left no-repeat;
+	height: 32px;
+	line-height: 32px;
+	padding-top: 0;
+	color: #333333;
+}
+
+#navbar {
+	padding: 6px 10px;
+	background-color: #C6D9EE;
+	text-align: right;
+	line-height: 24px;
+	border-bottom: 1px solid #A7B9D3;
+}
+#navbar span {
+	display: block;
+}
+
+#seperator {
+	float: left;
+	height: 600px;
+	width: 7px;
+	background-color: #AECCED;
+}
+#seperator:hover {
+	cursor: pointer;
+}
+#seperator img {
+	margin-top: 225px;
+	float: left;
+	margin-left: 1px;
+	_display: inline;
+	/*margin-left: 1px;*/
+}
+
+#content {
+	float: left;
+	/*margin: 10px 0 10px 10px;*/
+	_display: inline;
+	width:802px;
+}
+
+#footer {
+	clear: both;
+	text-align: right;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 0.8em;
+	padding: 1em 0;
+}
+#data_list{
+    _margin-left:10px;
+}
+
+#footer hr {
+	background-color: #CDCDCD;
+	border: 0 none;
+	color: #CCCCCC;
+	height: 1px;
+	width: 100%;
+    _width: 815px;
+}
+
+.fixed {
+	/* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+	position: absolute; 
+	right: 20px; 
+	bottom: 60px;
+	padding: 2px;
+}
+body > div.fixed {
+	/* used by Opera 5+, Netscape6+/Mozilla, Konqueror, Safari, OmniWeb 4.5+, iCab, ICEbrowser */
+	position: fixed;
+}
+
+
+/* common styles */
+
+.title {
+	font-size: 1.2em;
+	padding: 0 5px;
+	height: 2em;
+	line-height: 2em;
+	background-color: #ECF1FF;
+	/*-moz-border-radius-topright: 8px;*/
+}
+.title:hover {
+	background-color: #F2F5FF;
+}
+
+
+
+/* block用于带有ul列表的分块 */
+.block {
+	margin-bottom: 5px;
+	margin-top: 2px;
+}
+.block li {
+	background-color: #E6ECF6;
+	height: 24px;
+	line-height: 24px;
+	list-style: none;
+	margin: 1px 0;
+	padding-left: 28px;
+	overflow: hidden;
+}
+
+/* cont用于普通内容分块 */
+.cont {
+	_margin-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 2px;
+	background-color: #C6D9EE;
+	padding: 10px;
+	border: 1px solid #9EBAD5;
+}
+
+/* 设置内容块的ul行高 */
+.cont ul {
+	line-height: 1.8em;
+	list-style: outside;
+}
+
+/* 内容块中的hr样式 */
+.cont hr {
+border: 0 none;
+	background-color: #547AA2;
+	color: #547AA2;
+	_height: 2px;
+	border-top: 1px solid #547AA2;
+	border-bottom: 1px solid #FFF;
+	width: 100%;
+	margin: 10px 0;
+	*margin: 4px 0;
+	clear: both;
+}
+
+/* 内容块中的table基本间距 */
+.cont table td {
+	padding: 3px 1em;
+}
+
+/* 设置ul块的行高1.7em */
+.block ul {
+	line-height: 1.7em;
+	list-style: outside;
+}
+
+/* 默认情况下，没有right_col，所以只设置left_col */
+.left_col {
+	/*float: left;*/
+	_display: inline;
+	margin: 10px 0 10px 10px;
+}
+
+/* 普通DIV下间距10px */
+.bottom_col {
+	margin: 0 0 3px 0;
+}
+
+/* 好像只有homepage.cgi有right_col */
+.right_col {
+	float: left;
+	_display: inline;
+	margin: 10px 0 10px 10px;
+	width: 188px;
+	border: 1px solid #B9D1E2;
+}
+
+.datetime {
+	color: gray;
+	font-size: 0.8em;
+	margin-left: 1em;
+}
+
+.tiny_textbox {
+	width: 1.75em;
+}
+
+.scroll_div {
+	background:#fff;
+	margin:2px;
+	padding:10px;
+	border:solid 1px #336600;
+	display:none;
+}
+
+/* 弹出窗口样式 */
+.dialog {
+	display: none;
+	background-color: #FFFFFF;
+	margin-bottom: 10px;
+	margin-top: 2px;
+	padding: 10px;
+	border: 1px solid #B4C1D6;
+	border-top: none;
+	z-index: 100000;
+	position: absolute;
+}
+
+.dialog thead th {
+	background: url(http://news.sina.com.cn/deco/2010/0813/admin_img/bg-thead.png) repeat-x;
+	height: 34px;
+	line-height: 34px;
+	padding: 0 7px;
+	font-size: 14px;
+	font-family: 微软雅黑, 宋体;
+}
+.dialog td {
+	padding: 6px 7px;
+}
+
+#overlay {
+	background-color:#333333;
+	left:0;
+	opacity:0.3;
+	overflow:auto;
+	position:absolute;
+	top:0;
+	z-index:99;
+}
+
+.textleft {
+	text-align:left;
+}

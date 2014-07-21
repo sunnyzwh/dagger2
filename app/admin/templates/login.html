@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新浪孜⒉┄题搭建系统</title>
+<meta name="Keywords" content="," />
+<meta name="Description" content="此页面的说明" />
+<!--<script type="text/javascript" src="http://image2.sina.com.cn/home/sinaflash.js"></script>-->
+<style type="text/css">
+<!--
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,table,td,th,form,fieldset,img,dl,dt,dd{margin:0;padding:0;}
+textarea,input,select,body,table{font-size:12px;}
+select,input{vertical-align:middle;}
+fieldset,img{border:0;}
+ul,ol{list-style:none;}
+
+a{color:#000;text-decoration:underline;}
+a:visited{color:#800080;text-decoration:underline;}
+a:hover{color:#f00;text-decoration:underline;}
+
+.clearit{clear:both;font-size:0;line-height:0;height:0;}
+
+body{background:#eaeaea;}
+
+#logForm{background:url(http://www.sinaimg.cn/dy/stencil/sysimages/sysimg/login_mj_001.jpg) no-repeat 50% 0 #eaeaea;overflow:hidden;}
+#logForm h2{padding:24px 0 0;text-align:center;height:45px;font:bold 14px/20px Arial;color:#6b6b6b;}
+#logForm h4{font-size:12px;font-weight:normal;color:#6b6b6b;line-height:20px;width:250px;margin:0 auto;text-align:right;}
+#logForm .elements{text-align:center;padding:58px 0 0;}
+#logForm .elements p{height:31px;}
+#logForm .input_01{border:1px solid #c2c2c2;width:218px;height:16px;padding:2px 0 0 3px;background:url(http://www.sinaimg.cn/dy/stencil/sysimages/sysimg/login_mj_003.gif) no-repeat 0 0 #fff;_background-attachment:fixed;}
+#logForm .submit_01{height:24px;width:73px;border:none;background:url(http://www.sinaimg.cn/dy/stencil/sysimages/sysimg/login_mj_003.gif) no-repeat 0 -25px;margin-left:20px;line-height:24px;}
+-->
+</style>
+<script type="text/javascript">
+<!--
+var browserName = (function(){
+    if(external.max_version){
+        return "遨游(MAXTHON)";
+    };
+    if((/TencentTraveler/i).test(navigator.appVersion)){
+        return "腾讯TT(TencentTraveler)";
+    };
+    if((/TheWorld/i).test(navigator.appVersion)){
+        return "世界之窗(TheWorld)";
+    };
+    return "";
+})();
+if(browserName != ""){
+    alert("\n您正在使用“" + browserName + "”浏览器访问专题系统！\n\n\n此浏览器是第三方使用IE内核再开发而成，使用此浏览器将导致专题的部分功能无法使用。\n\n\n建议使用“IE6”、“IE7”、“Firefox”等浏览器。");
+};
+//-->
+</script>
+</head>
+<body>
+    <div id="topSP"></div>
+    <div id="logForm">
+    <form name="login" action="http://login.pub.sina.com.cn:8080/cgi-bin/gsps/login3.cgi" method="post" onsubmit="return chkForm()">
+        <h2><span style="font-size:36px;color:#C00;">X X</span><span style="font-size:36px;">后台系统</span> v1.0</h2>
+        <h4>xxxx系统</h4>
+        <div class="elements">
+            <input type="hidden" name="loginUrl" value="http%3A%2F%2Ft.pub.sina.com.cn%2F%3Fs%3Dchannel">
+            <p>用户名：<input type="text" name="txtUserID" class="input_01" /></p>
+            <p>密&nbsp;&nbsp;码：<input type="password" name="txtPassword" class="input_01" /></p>
+            <p><input type="submit" value="登&nbsp;&nbsp;录" class="submit_01" /></p>
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function setHeight(){
+            mTop = Math.round((document.documentElement.clientHeight - 240)*0.4);
+            document.getElementById("topSP").style.height = (mTop>0?mTop:0) + "px";
+        };
+        setHeight();
+        document.forms["login"].txtUserID.focus();
+        window.onresize = setHeight;
+        
+        function chkForm(){
+            if(document.forms["login"].txtUserID.value.length < 3){
+                alert("请正确输入用户名！");
+                document.forms["login"].txtUserID.select();
+                return false;
+            };
+            if(document.forms["login"].txtPassword.value.length < 3){
+                alert("请正确输入密码！");
+                document.forms["login"].txtPassword.select();
+                return false;
+            };
+            document.forms["login"].loginUrl.value = 'http://' + location.host + '/';
+            return true;
+        };
+    </script>
+</body>
+</html>
